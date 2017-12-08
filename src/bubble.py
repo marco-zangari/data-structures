@@ -22,13 +22,13 @@ if __name__ == '__main__':
     c_list = [list(range(100, 0, -1))]
 
     time_a = ti.timeit("bubble_sort(a_list)"),
-                setup = "from __main__ import a_list, bubble_sort"
+    setup = "from __main__ import a_list, bubble_sort"
 
     time_b = ti.timeit("bubble_sort(b_list"),
-                setup = "from __main__ import b_list, bubble_sort"
+    setup = "from __main__ import b_list, bubble_sort"
 
     time_c = ti.timeit("bubble_sort(c_list"),
-                setup = "from __main__ import c_list, bubble_sort"
+    setup = "from __main__ import c_list, bubble_sort"
 
     print(f"""
 These are bubble sort times for different kinds of lists:\
