@@ -6,9 +6,9 @@ def merge_sort(seq):
     mid = len(seq) // 2
     lft, rgt = seq[:mid], seq[mid:]
     if len(lft) > 1:
-        lft.merge_sort(lft)
+        lft = merge_sort(lft)
     if len(rgt) > 1:
-        rgt.merge_sort(rgt)
+        rgt = merge_sort(rgt)
     res = []
     while lft and rgt:
         if lft[-1] >= rgt[-1]:
