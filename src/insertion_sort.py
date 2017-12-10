@@ -12,11 +12,3 @@ def insertion_sort(list_obj):
             i = i - 1
             list_obj[i] = current
     return list_obj
-
-
-if __name__ == '__main__':
-    import timeit as ti
-    list1 = [4, 3, 7, 6]
-    list2 = [72, 4, 10, 6, 20, 18, 91, 45, 3, 15]
-    list3 = list(range(100)) for
-
