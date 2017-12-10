@@ -45,5 +45,4 @@ Input: [72, 4, 10, 6, 20, 18, 91, 45, 3, 15]
 Output: { time_b }
 
 Input (list(range(100, 0, -1)))
-Output: { time_c }
-        .""")
+Output: { time_c }.""")
