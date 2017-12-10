@@ -24,5 +24,3 @@ def test_bubble_sort_decimals():
     """Test bubble sort takes a decimal float."""
     list_decimals = [5.5, 5.3, 5.2, 4]
     assert bubble_sort(list_decimals) == [4, 5.2, 5.3, 5.5]
-
-    # tests for decimal
