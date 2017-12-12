@@ -18,4 +18,4 @@ def quick_sort(alist):
                 less.append(num)
             if num < pivot:
                 greater.append(num)
-    return quick_sort(less) + pivot + quick_sort(greater)
+    return quick_sort(less) + [pivot] + quick_sort(greater)
