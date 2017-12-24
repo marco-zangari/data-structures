@@ -1,10 +1,10 @@
 """Implement four traversal methods in bst."""
 
 
-def bst_pre_order_traversal(self):
+def bst_pre_order_traversal(tree):
     """Traverse a binary search tree with pre-order."""
     stack = []
-    curr = None
+    curr = tree.root
     while stack or curr:
         if node is curr:
             curr = stack.pop()
