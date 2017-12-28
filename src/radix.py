@@ -22,18 +22,18 @@ def radix_sort(unsorted, base=10):
         for num in holder_list:
             nearly_sort = int(num) // iteration
             placement = str(nearly_sort)[-1]
-            import pdb; pdb.set_trace()
             temporary[int(placement)].append(num)
 
-        #     for bucket in buckets:
-        #         temp_list = []
-        #         for i in bucket:
-        #             if bucket[i]:
-        #                 returned_item = bucket.pop()
-        #                 temp_list = []
-        #                 temp_list.append(returned_item)
-        #     holder_list = temp_list
-        # new_nth_place -= 1
+            for bucket in temporary:
+                temp_list = []
+            import pdb; pdb.set_trace()
+                for i in bucket:
+                    if bucket[i]:
+                        returned_item = bucket.pop()
+                        temp_list = []
+                        temp_list.append(returned_item)
+            holder_list = temp_list
+        new_nth_place -= 1
 
 
 unsorted = [170, 45, 75, 90, 2, 802, 2, 66]
