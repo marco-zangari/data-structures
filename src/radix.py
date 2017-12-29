@@ -7,7 +7,7 @@ def radix_sort(unsorted):
     maxLength = False
     tmp, placement = -1, 1
 
-    while not MaxLength:
+    while not maxLength:
         maxLength = True
         buckets = [[] for _ in range(radix)]
         for i in unsorted:
