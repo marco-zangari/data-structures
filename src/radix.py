@@ -1,37 +1,27 @@
-"""Implement radix sort function."""
+"""Implement radix sort function, hattip geekviewpoint."""
 
 
-def radix_sort(unsorted, base=10):
+def radix_sort(unsorted):
     """Sort unsorted numbers in list working right- to left-most digit."""
-    holder_list = []
-    nth_place = len(str(max(unsorted)))
-    if nth_place < 10:
-        str_nth = '0' + str(nth_place)
-    else:
-        str_nth = str(nth_place)
-    for num in unsorted:
-        reformatted_num = format((num), str_nth)
-        holder_list.append(reformatted_num)  #  all numbers same length, stringified with zeros in front
+    radix = 10
+    maxLength = False
+    tmp, placement = -1, 1
 
-    new_nth_place = int(nth_place)
-    while int(new_nth_place) > 0:
+    while not MaxLength:
+        maxLength = True
+        buckets = [[] for _ in range(radix)]
+        for i in unsorted:
+            tmp = i / placement
+            buckets[int(tmp) % radix].append(i)
+            if maxLength and tmp > 0:
+                maxLength = False
+        a = 0
+        for b in range(radix):
+            buck = buckets[b]
+            for i in buck:
+                unsorted[a] = i
+                a += 1
+        placement *= radix
 
-        buckets = [[] for _ in range(base)]
-        temporary = buckets
-        iteration = base ** int(new_nth_place - 1)
-        for num in holder_list:
-            nearly_sort = int(num) // iteration
-            placement = str(nearly_sort)[-1]
-            temporary[int(placement)].append(num)
-
-        for sub_list in temporary:
-            import pdb; pdb.set_trace()
-            temp_list = []
-            for item in range(sub_list):
-                if sub_list is not None:
-                    returned_item = sub_list.pop()
-                    temp_list.append(returned_item)
-        holder_list = temp_list
-    new_nth_place -= 1
 
 # unsorted = [170, 45, 75, 90, 2, 802, 2, 66]
