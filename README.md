@@ -3,7 +3,7 @@
 **Author**: Gabriel Meringolo, Marco Zangari
 
 ## Overview
-Sample code for classic data structures
+Sample code for classic data structures and sorting algorithms
 
 ## Radix Sort
 
