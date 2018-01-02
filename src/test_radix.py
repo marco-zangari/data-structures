@@ -5,6 +5,12 @@ import pytest
 from radix import radix_sort
 
 
+def test_radix_sort_no_objs():
+    """Test radix works with an empty list."""
+    no_list = []
+    assert radix_sort(no_list) == []
+
+
 def test_radix_sort_short_list():
     """Test radix with small list."""
     short_list = [4, 3, 7, 6]
