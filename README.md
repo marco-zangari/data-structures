@@ -8,10 +8,11 @@ Sample code for classic data structures
 ## Radix Sort
 
 ```
-radix_sort(alist)
+radix_sort(list)
 ```
 
-Big O runtime:
+Big O runtime: O(kn)
+
 ## Graph
 
 ### Make a Graph
