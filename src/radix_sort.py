@@ -3,7 +3,7 @@
 from decimal import Decimal
 
 def radix_sort(unsorted):
-    """Sort unsorted numbers in list working right- to left-most digit."""
+    """Sort unsorted numbers in list."""
     radix = 10
     maxLength = False
     tmp, placement = -1, 1
