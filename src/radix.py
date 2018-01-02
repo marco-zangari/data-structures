@@ -22,6 +22,7 @@ def radix_sort(unsorted):
                 unsorted[a] = i
                 a += 1
         placement *= radix
+    return unsorted
 
 
 if __name__ == '__main__':
