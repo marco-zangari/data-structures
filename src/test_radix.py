@@ -27,6 +27,7 @@ def test_radix_sort_long_list():
 def test_radix_sort_sorted_list():
     """Test radix with an already sorted list."""
     sorted_list = [1, 2, 3, 4, 5, 6, 7, 88, 104, 224]
+    assert radix_sort(sorted_list) == [1, 2, 3, 4, 5, 6, 7, 88, 104, 224]
 
 
 def test_radix_sort_with_random_generate_list():
