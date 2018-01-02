@@ -1,5 +1,6 @@
 """Test radix sort algorithm."""
 
+from random import randint
 import pytest
 
 from radix import radix_sort
@@ -23,13 +24,12 @@ def test_radix_sort_long_list():
     assert radix_sort(long_list) == [3, 4, 6, 10, 15, 18, 20, 45, 72, 91]
 
 
-def test_radix_sort_negative_num():
-    """Test radix sort works with negative numbers."""
-    list_negative_num = [72, 4, -6]
-    assert radix_sort(list_negative_num) == [-6, 4, 72]
+def test_radix_sort_sorted_list():
+    """Test radix with an already sorted list."""
+    sorted_list = [1, 2, 3, 4, 5, 6, 7, 88, 104, 224]
 
 
-def test_radix_sort_decimals():
-    """Test radix sort takes a decimal float."""
-    list_decimals = [5.5, 5.3, 5.2, 4]
-    assert radix_sort(list_decimals) == [4, 5.2, 5.3, 5.5]
+def test_radix_sort_with_random_generate_list():
+    """Test random generated list of hundred returns sorted."""
+    rando_list = [randint(1, 100000) for x in range(100)]
+    assert radix_sort(rando_list) == sorted(rando_list)
