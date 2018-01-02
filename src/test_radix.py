@@ -1,7 +1,9 @@
 """Test radix sort algorithm."""
 
 import pytest
+
 from radix import radix_sort
+
 
 def test_radix_sort_short_list():
     """Test radix with small list."""

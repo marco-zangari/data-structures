@@ -5,6 +5,13 @@
 ## Overview
 Sample code for classic data structures
 
+## Radix Sort
+
+```
+radix_sort(alist)
+```
+
+Big O runtime:
 ## Graph
 
 ### Make a Graph
