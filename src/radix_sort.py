@@ -2,8 +2,8 @@
 
 from decimal import Decimal
 
-def radix_sort(unsorted):
-    """Sort unsorted numbers in list."""
+def radix_sort(alist):
+    """Sort a list of numbers in list."""
     radix = 10
     maxLength = False
     tmp, placement = -1, 1
@@ -11,7 +11,7 @@ def radix_sort(unsorted):
     while not maxLength:
         maxLength = True
         buckets = [[] for _ in range(radix)]
-        for i in unsorted:
+        for i in alist:
             tmp = i / placement
             buckets[int(tmp) % radix].append(i)
             if maxLength and tmp > 0:
@@ -20,10 +20,10 @@ def radix_sort(unsorted):
         for b in range(radix):
             buck = buckets[b]
             for i in buck:
-                unsorted[a] = i
+                alist[a] = i
                 a += 1
         placement *= radix
-    return unsorted
+    return alist
 
 if __name__ == '__main__':
     import timeit as ti
