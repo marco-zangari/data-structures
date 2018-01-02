@@ -3,7 +3,7 @@
 from random import randint
 import pytest
 
-from radix import radix_sort
+from radix_sort import radix_sort
 
 
 def test_radix_sort_no_objs():
