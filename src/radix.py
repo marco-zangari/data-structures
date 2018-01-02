@@ -1,5 +1,6 @@
 """Implement radix sort function, hattip geekviewpoint."""
 
+from decimal import Decimal
 
 def radix_sort(unsorted):
     """Sort unsorted numbers in list working right- to left-most digit."""
@@ -23,7 +24,6 @@ def radix_sort(unsorted):
                 a += 1
         placement *= radix
     return unsorted
-
 
 if __name__ == '__main__':
     import timeit as ti
