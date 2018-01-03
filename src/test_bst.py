@@ -99,3 +99,30 @@ def test_insert_two_nodes_one_return_root(empty_tree):
     bst.insert(50)
     bst.insert(45)
     assert bst.root.val == 50
+
+
+def test_pre_order_traversal(blncd_tree):
+    """Test pre order."""
+    from bst import BST
+    bst = BST()
+    assert bst.bst_pre_order_traversal() == [50, 30, 20, 15, 25, 40, 35, 45, 70, 60, 55, 65, 90, 80, 100]
+
+
+def test_post_order_traversal(blncd_tree):
+    """Test post order."""
+    from bst import BST
+    bst = BST()
+    assert bst.bst_post_order_traversal() == [15, 25, 20, 35, 45, 40, 30, 55, 65, 60, 80, 100, 90, 70]
+
+
+def test_in_order_traversal(blncd_tree):
+     """Test in order."""
+    from bst import BST
+    bst = BST()
+    assert bst.bst_in_order_traversal() == [15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 90, 100]
+
+
+def test_breadth_first_traversal(blncd_tree):
+from bst import BST
+    bst = BST()
+    assert bst.bst_post_order_traversal() == [50, 30, 70, 20, 40, 60, 90, 15, 25, 35, 45, 55, 65, 80, 100]

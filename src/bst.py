@@ -99,7 +99,7 @@ class BST(object):
     def delete(self, val):
         """Delete node from binary search tree."""
         curr = self.search(val)  # curr = node to delete
-        parent = self.parent
+        parent = curr.parent
 
         if not curr.left and not curr.right:  # node has no children
             if curr.val < parent.val:
@@ -157,3 +157,72 @@ class BST(object):
                 target.parent = curr.parent
                 target.left = curr.left
                 target.right = curr.right
+
+    def bst_pre_order_traversal(self):
+        """Traverse a binary search tree with pre-order."""
+        if self.root is None:
+            raise ValueError('The tree has no nodes.')
+        stack = []
+        curr = self.root
+        while stack or curr:
+            if curr:
+                yield curr.val
+                if curr.right:
+                    stack.append(curr.right)
+                curr = curr.left
+            else:
+                curr = stack.pop()
+
+    def bst_post_order_traversal(self):
+        """Traverse a binary search tree with post order."""
+        if self.root is None:
+            raise ValueError('The tree has no nodes.')
+        stack = []
+        curr = self.root
+        while curr or stack:
+            if curr:
+                if curr.right:
+                    stack.append(curr.right)
+                stack.append(curr)
+                curr = curr.left
+            else:
+                curr = stack.pop()
+                if stack and (curr.right == stack[-1]):
+                    stack.pop()
+                    stack.append(curr)
+                    curr = curr.right
+                else:
+                    yield curr.val
+                    curr = None
+
+    def bst_in_order_traversal(self):
+        """Traverse a binary search tree with in order sequence."""
+        if self.root is None:
+            raise ValueError('The tree has no nodes.')
+        stack = []
+        curr = self.root
+        while curr or stack:
+            if curr:
+                stack.append(curr)
+                curr = curr.left
+            else:
+                curr = stack.pop()
+                yield curr.val
+                curr = curr.right
+
+    def bst_breadth_first_traversal(self):
+        """Traverse a binary search tree via breadth first."""
+        if self.root is None:
+            raise ValueError('The tree has no nodes.')
+        curr = self.root
+        nodes = []
+        nodes.append(curr)
+        while nodes:
+            curr = nodes.pop(0)
+            if curr.left:
+                left = curr.left
+                nodes.append(left)
+            if curr.right:
+                right = curr.right
+                nodes.append(right)
+            yield curr.val
