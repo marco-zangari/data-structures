@@ -224,18 +224,17 @@ class BST(object):
 
     def bst_breadth_first_traversal(self):
         """Traverse a binary search tree via breadth first."""
-        current = self.root
+        if self.root is None:
+            raise ValueError('The tree has no nodes.')
+        curr = self.root
         nodes = []
-        nodes.append(current)
-        path = []
+        nodes.append(curr)
         while nodes:
-            if current.left:
-                left = current.left
+            curr = nodes.pop(0)
+            if curr.left:
+                left = curr.left
                 nodes.append(left)
-            if current.right:
-                right = current.right
+            if curr.right:
+                right = curr.right
                 nodes.append(right)
-            path.append(current)
-            nodes.delete(current)
-            current = nodes[0]
-        yield path
+            yield curr.val
