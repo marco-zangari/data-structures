@@ -172,6 +172,8 @@ class BST(object):
 
     def bst_post_order_traversal(self):
         """Traverse a binary search tree with post order."""
+        if self.root is None:
+            raise ValueError('The tree has no nodes.')
         stack = []
         curr = self.root
         while curr or stack:
@@ -182,7 +184,7 @@ class BST(object):
                 curr = curr.left
             else:
                 curr = stack.pop()
-                if stack and (curr.right == stack):
+                if stack and (curr.right == stack[-1]):
                     stack.pop()
                     stack.append(curr)
                     curr = curr.right
@@ -192,8 +194,10 @@ class BST(object):
 
     def bst_in_order_traversal(self):
         """Traverse a binary search tree with in order sequence."""
+        if self.root is None:
+            raise ValueError('The tree has no nodes.')
         stack = []
-        curr = None
+        curr = self.root
         while curr or stack:
             if curr:
                 stack.append(curr)
