@@ -3,7 +3,15 @@
 **Author**: Gabriel Meringolo, Marco Zangari
 
 ## Overview
-Sample code for classic data structures
+Sample code for classic data structures and sorting algorithms
+
+## Radix Sort
+
+```
+radix_sort(list)
+```
+
+Big O runtime: O(kn)
 
 ## Graph
 
