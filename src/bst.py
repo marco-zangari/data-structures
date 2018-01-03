@@ -210,18 +210,6 @@ class BST(object):
                 yield curr.val
                 curr = curr.right
 
-    # def bst_breadth_first_traversal(self):
-    #     """Traverse binary search tree with breadth first sequence."""
-    #     stack = []
-    #     curr = self.root
-    #     while stack or curr:
-    #         if curr:
-    #             yield curr
-    #             stack.extend(curr.left, curr.right)
-    #             curr = stack.pop(0)
-    #         else:
-    #             curr = stack.pop(0)
-
     def bst_breadth_first_traversal(self):
         """Traverse a binary search tree via breadth first."""
         if self.root is None:
