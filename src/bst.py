@@ -160,14 +160,17 @@ class BST(object):
 
     def bst_pre_order_traversal(self):
         """Traverse a binary search tree with pre-order."""
+        if self.root is None:
+            raise ValueError('The tree has no nodes.')
         stack = []
         curr = self.root
         while stack or curr:
-            if node is curr:
-                curr = stack.pop()
-            else:
+            if curr:
                 yield curr.val
-                stack.extend([curr.right, curr.left])
+                if curr.right:
+                    stack.append(curr.right)
+                curr = curr.left
+            else:
                 curr = stack.pop()
 
     def bst_post_order_traversal(self):
