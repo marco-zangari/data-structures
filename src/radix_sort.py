@@ -30,16 +30,17 @@ if __name__ == '__main__':
 
     a_list = [4, 3, 7, 6]
     b_list = [72, 4, 10, 6, 20, 18, 91, 45, 3, 15]
-    c_list = [list(range(100, 0, -1))]
+    c_list = [4, 10, 6, 15, 20, 3, 72, 91, 45, 18]
+    count = 1000
 
     time_a = ti.timeit("radix_sort(a_list)",
-    setup = "from __main__ import a_list, radix_sort")
+                       setup = "from __main__ import a_list, radix_sort", number=count)
 
     time_b = ti.timeit("radix_sort(b_list)",
-    setup = "from __main__ import b_list, radix_sort")
+                       setup = "from __main__ import b_list, radix_sort", number=count)
 
     time_c = ti.timeit("radix_sort(c_list)",
-    setup = "from __main__ import c_list, radix_sort")
+                       setup = "from __main__ import c_list, radix_sort", number=count)
 
     print(f"""
 These are radix sort times for different kinds of lists:\
