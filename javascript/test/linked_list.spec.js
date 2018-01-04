@@ -8,7 +8,7 @@ let assert = chai.assert
 describe(linked_list.js tests, function(){
   it('test for linked list node', function(){
     ll = linkedList.LinkedList()
-    ll.assert.isNull(ll.head, null)
+    ll.assert.isNull(ll.head)
   })
 
 })
