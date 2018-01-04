@@ -36,12 +36,18 @@ class Trie(object):
         count += 1
         self.size += 1
 
-    def contains(self, string):
+    def contains(self, word):
         """Return True if in string; False if not."""
-        try:
-            return self[string]
-        except KeyError:
-            print('The word is not in your trie tree')
+        current = self.root
+        for letter in word:
+            if letter in current.children:
+                current = current.children[letter]
+            else:
+                return False
+        if current.terminus:
+            return True
+        else:
+            return False
 
     def size(self):
         """Return total number of words in trie; 0 if empty."""

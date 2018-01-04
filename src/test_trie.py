@@ -40,3 +40,10 @@ def test_insert_dict_value_where_expected():
     t = Trie()
     t.insert('apple')
     assert isinstance(t.root.children['a'].children['p'], Node)
+
+
+def test_contains_works():
+    """Test contains works."""
+    t = Trie()
+    t.insert('apple')
+    assert t.contains('apple') == True
