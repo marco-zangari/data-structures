@@ -1,0 +1,9 @@
+
+[development]
+ipython
+
+[testing]
+pytest
+pytest-cov
+pytest-watch
+tox

@@ -1,0 +1,13 @@
+{
+  "src/test_bst.py::test_insert_two_nodes": true,
+  "src/test_bst.py::test_insert_two_nodes_one_lesser_so_right": true,
+  "src/test_bst.py::test_node_isinstance_node": true,
+  "src/test_bst_traversal.py::test_bst_pre_order_traversal": true,
+  "src/test_hash_table.py::test_HashTable": true,
+  "src/test_hash_table.py::test_get_returns_key": true,
+  "src/test_radix.py::test_radix_sort_decimals": true,
+  "src/test_radix.py::test_radix_sort_negative_num": true,
+  "src/test_trie.py::test_init_trie_object_": true,
+  "src/test_trie.py::test_init_trie_object_size": true,
+  "src/test_trie.py::test_trie_init_size": true
+}
