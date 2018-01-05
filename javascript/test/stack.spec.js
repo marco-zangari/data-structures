@@ -15,10 +15,14 @@ describe('stack.js tests', function() {
     stack.push('two')
     expect(stack.pop()).is.equal('two')
   })
-  it('test len method', function(){
+  it('test size method', function(){
     let stack = new Stack()
     stack.push('one')
     stack.push('two')
     expect(stack.size()).is.equal(2)
+  })
+  it('test error message for popping an empty stack', function(){
+    let stack = new Stack()
+    expect(stack.pop()).is.equal('Cannot pop from an empty list.')
   })
 })
