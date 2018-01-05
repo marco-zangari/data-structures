@@ -38,12 +38,20 @@ describe('linked_list.js tests', function(){
     let output = ll.search(5)
     expect(output.data).to.equal(5)
   })
-  it('test linked list number not in list', function(){
+  it('test linked list search for number not in list', function(){
     let ll = new linkedList.LinkedList()
     for(let i = 0; i < 25; i++){
       ll.push(i)
     }
     let output = ll.search(50)
     expect(output.data).to.not.equal(50)
+  })
+  it('test linked list display', function(){
+    let ll = new linkedList.LinkedList()
+    for(let i = 0; i < 5; i++){
+      ll.push(i)
+    }
+    let output = ll.display()
+    expect(output.data).to.equal('(4, 3, 2, 1, 0)')
   })
 })
