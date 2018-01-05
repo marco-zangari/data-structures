@@ -14,9 +14,15 @@ describe('linked_list.js tests', function(){
     let ll = new linkedList.LinkedList()
     expect(ll.head).is.null
   })
-  it('test linked list pop method', function(){
+  it('test linked list push method', function(){
     let ll = new linkedList.LinkedList()
     ll.push(1)
     expect(ll.head.data).to.equal(1)
+  })
+  it('test linked list pop method', function(){
+    let ll = new linkedList.LinkedList()
+    ll.push(1)
+    ll.pop()
+    expect(ll.head).is.null
   })
 })
