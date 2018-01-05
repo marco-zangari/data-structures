@@ -1,6 +1,6 @@
 'use strict'
 
-const dLL = require('../doubly_linked_list')
+const dLL = require('./dll')
 
 class Queue {
   constructor(iterable=null){
@@ -9,12 +9,15 @@ class Queue {
       iterable.map(x=> this.enqueue(x))
     }
   }
+
   enqueue(val){
     return this.func.push(val)
   }
+
   dequeue(val){
     return this.func.shift()
   }
+
   peek(){
     if(this.func.tail){
       return this.func.tail.data
@@ -23,7 +26,9 @@ class Queue {
       return null
     }
   }
+
   size(){
     return this.func._len
   }
 }
+module.exports = Queue
