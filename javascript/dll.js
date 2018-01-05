@@ -76,4 +76,4 @@ class DoublyLinkedList {
     }
   }
 }
-module.export = {DoublyLinkedList, Node}
+module.exports = {DoublyLinkedList, Node}
