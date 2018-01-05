@@ -52,6 +52,6 @@ describe('linked_list.js tests', function(){
       ll.push(i)
     }
     let output = ll.display()
-    expect(output.data).to.equal('(4, 3, 2, 1, 0)')
+    expect(output).to.equal('(4, 3, 2, 1, 0)')
   })
 })
