@@ -15,4 +15,10 @@ describe('stack.js tests', function() {
     stack.push('two')
     expect(stack.pop()).is.equal('two')
   })
+  it('test len method', function(){
+    let stack = new Stack()
+    stack.push('one')
+    stack.push('two')
+    expect(stack.size()).is.equal(2)
+  })
 })
