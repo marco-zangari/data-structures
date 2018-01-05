@@ -54,4 +54,24 @@ describe('linked_list.js tests', function(){
     let output = ll.display()
     expect(output).to.equal('(4, 3, 2, 1, 0)')
   })
+  it('test linked list remove method, remove one integer', function(){
+    let ll = new linkedList.LinkedList()
+    for(let i = 0; i < 50; i++){
+      ll.push(i)
+    }
+    let output = ll.remove(25)
+    expect(ll.data).to.not.equal(25)
+  })
+  it('test linked list remove method, does not find out-of-range int', function(){
+    let ll = new linkedList.LinkedList()
+    for(let i = 0; i < 50; i++){
+      ll.push(i)
+    }
+    expect(ll.data).to.not.equal(100)
+  })
+  it('test linked list remove method, removes no thing if no thing', function(){
+    let ll = new linkedList.LinkedList()
+    let output = ll.display()
+    expect(output).to.equal('()')
+  })
 })
