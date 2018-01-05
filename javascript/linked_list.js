@@ -35,7 +35,7 @@ class LinkedList {
       return this._count
   }
 
-  search() {
+  search(val) {
       let current = this.head
       while(current){
           if(current.data === val){
